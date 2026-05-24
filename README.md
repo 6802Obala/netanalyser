@@ -50,8 +50,8 @@ sudo apt install g++ libpcap-dev -y
 
 ### Build
 ```bash
-git clone https://github.com/6802Obala/netanalyzer.git
-cd netanalyzer
+git clone https://github.com/6802Obala/netanalyser.git
+cd netanalyser
 make
 ```
 
@@ -61,19 +61,19 @@ make
 
 ```bash
 # Basic – auto-detect interface
-sudo ./netanalyzer
+sudo ./netanalyser
 
 # Specify interface
-sudo ./netanalyzer -i eth0
+sudo ./netanalyser -i eth0
 
 # Apply BPF filter (TCP only)
-sudo ./netanalyzer -i eth0 -f "tcp"
+sudo ./netanalyser -i eth0 -f "tcp"
 
 # Capture 200 packets and save to file
-sudo ./netanalyzer -i eth0 -c 200 -o capture.pcap
+sudo ./netanalyser -i eth0 -c 200 -o capture.pcap
 
 # Monitor DNS traffic only
-sudo ./netanalyzer -i eth0 -f "udp port 53"
+sudo ./netanalyser -i eth0 -f "udp port 53"
 
 # Stop with Ctrl+C
 ```
